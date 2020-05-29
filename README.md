@@ -10,18 +10,20 @@ The first component who gets the data should store it in the localStorage so the
 
 Pros:
 - access to data on all opened tabs
-- able to extend and apply business logic is id need it
+- able to extend and apply business logic if is need it
 
 Cons:
-- couple the components: contracts, synch issues/test, dependencies ...
+- couple the components: define contracts, synch functionality, testing, dependencies ...
 
 ### Option 2 - Call the API as may times is need and use cache control 
 
 Pros:
+- make use of browser cache (no extra calls are done unless the cache expires) 
 - each component will continue to be independent but still having the data
+- no "extra" code/functionality required
 
 Cons:
-- depending on the cache control setting the data might be few seconds, minutes ... old
+- the data might be old (seconds, minutes ... depending on the cache control setting)
 
 ## Install
 
